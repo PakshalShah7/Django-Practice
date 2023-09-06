@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block content %}
+    {% for name in movies %}
+    <h3>{{name.title}}</h3>
+    {% endfor %}
+{% endblock content%}

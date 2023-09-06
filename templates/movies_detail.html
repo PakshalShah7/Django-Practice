@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block title %}Movie Details{% endblock title %}
+{% block content %}
+    <h3><span>{{movie.title}}</span><br></h3>
+    <p>Release Date: <span>{{movie.release_date}}</span><br></p>
+    <p>Movie Description: <span>{{movie.description}}</span><br></p>
+    <p>Person name: <span>{{movie.person_name}}</span><br></p>
+{% endblock content %}

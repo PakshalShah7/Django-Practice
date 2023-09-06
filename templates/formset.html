@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Formset{% endblock title %}
+{% block content %}
+{% load static %}
+Enter Details
+<form method="POST">
+    {% csrf_token %}
+    {{ formset.management_form }}
+    {% for form in formset %}
+        {{ form.as_p }}
+        {% if form.can_delete %}
+            {{ form.DELETE }}
+        {% endif %}
+    {% endfor %}
+    <button>submit</button>
+</form>
+{% endblock content %}
